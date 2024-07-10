@@ -7,6 +7,7 @@ import os
 def fetch_blog_content(url):
     # Fetch the HTML content of the blog post
     response = requests.get(url)
+    response.encoding = 'utf-8'  # Explicitly set the encoding
     html_content = response.text
     return html_content
 
